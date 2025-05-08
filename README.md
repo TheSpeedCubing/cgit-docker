@@ -6,7 +6,7 @@ This project provides a simple Docker setup for running CGit with Nginx.
 
 1. Clone this Repository:
 
-    ```yaml
+    ```bash
     git clone https://github.com/TheSpeedCubing/cgit-nginx.git
     cd onlinejudge-backend
     ```

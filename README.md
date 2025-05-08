@@ -10,7 +10,7 @@ This project provides a simple Docker setup for running CGit with Nginx.
 services:
   cgit:
     image: ghcr.io/thespeedcubing/cgit-nginx
-    name: cgit
+    container_name: cgit
     ports:
       - "80:80"
 ```

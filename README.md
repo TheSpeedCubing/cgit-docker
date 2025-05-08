@@ -1,0 +1,22 @@
+# cgit-docker
+
+This project provides a simple Docker setup for running CGit with Nginx.
+
+## How to (As a User)
+
+1. Create the docker-compose.yml:
+
+```yaml
+services:
+  cgit:
+    image: ghcr.io/thespeedcubing/cgit-nginx
+    name: cgit
+    ports:
+      - "80:80"
+```
+
+2. Start the container:
+
+```bash
+sudo docker compose up -d
+```

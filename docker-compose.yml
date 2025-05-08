@@ -1,0 +1,13 @@
+services:
+  cgit:
+    image: ghcr.io/thespeedcubing/cgit-nginx
+    container_name: cgit
+    ports:
+    - "80:80"
+    volumes:
+    - ./mounts/cgitrc:/etc/cgitrc
+    - cgit_repo:/srv/git
+
+volumes:
+  cgit_repo:
+    name: cgit_repo

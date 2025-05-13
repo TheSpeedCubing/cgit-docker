@@ -1,21 +1,13 @@
-FROM debian:latest
+FROM alpine:latest
 
-RUN apt-get update && apt-get install -y \
-    cgit \
-    spawn-fcgi \
-    fcgiwrap \
-    nginx \
-    git \
-    python3-markdown \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache \
+    lighttpd \
+    cgit
 
-RUN rm -rf /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+RUN mkdir -p /srv/git/
 
-COPY cgit.conf /etc/nginx/conf.d/cgit.conf
+COPY lighttpd.cgit.conf /etc/lighttpd/
 
 EXPOSE 80
 
-COPY start.sh /start.sh
-RUN chmod +x /start.sh
-
-CMD ["/start.sh"]
+CMD ["lighttpd", "-D", "-f", "/etc/lighttpd/lighttpd.cgit.conf"]

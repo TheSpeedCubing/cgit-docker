@@ -1,7 +1,3 @@
 scan-path=/srv/git
 
-css=/cgit-css/cgit.css
-logo=/cgit-css/cgit.png
-favicon=/cgit-css/favicon.ico
-
 virtual-root=/

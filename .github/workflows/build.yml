@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t "$REGISTRY_URL/cgit" .
+          docker build --progress=plain -t "$REGISTRY_URL/cgit" .
 
       - name: Log in to Docker Registry
         run: echo "$REGISTRY_PASSWORD" | docker login "$REGISTRY_URL" -u "$REGISTRY_USERNAME" --password-stdin

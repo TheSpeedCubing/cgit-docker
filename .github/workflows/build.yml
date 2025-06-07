@@ -23,7 +23,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Run Docker Build
+      - name: Build Docker Image
         run: |
           docker build -t "$REGISTRY_URL/cgit" .
 

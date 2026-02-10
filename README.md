@@ -2,7 +2,7 @@
 
 This repo provides a Docker setup for running cgit.
 
-## How to (As a User)
+## How to (Deploy with Docker)
 
 1. Clone this Repository:
 

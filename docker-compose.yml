@@ -1,7 +1,9 @@
 services:
   cgit:
-    image: ghcr.io/thespeedcubing/cgit-nginx
+    image: ghcr.io/thespeedcubing/cgit
     container_name: cgit
+    environment:
+    - REPO_OWNER=${REPO_OWNER:-git}
     ports:
     - "80:80"
     volumes:
